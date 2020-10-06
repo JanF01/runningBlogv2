@@ -1,0 +1,70 @@
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100%;
+  font-family: "Roboto", monospace;
+  font-weight: 400;
+  color: rgb(218, 218, 218);
+  @include flex();
+  flex-direction: column;
+  padding-top: 3vh;
+
+  ul {
+    @include flex();
+    list-style-type: none;
+    width: 360px;
+    margin: 4vh 1% 0 0;
+    padding: 0;
+
+    li {
+      font-size: 0.9em;
+      @include flex();
+      flex: 1;
+      margin: 0;
+      padding: 0.4em 0 0.4em 0;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  .menu,
+  .menul {
+    width: 4%;
+    position: absolute;
+    top: 4.3vh;
+    right: 8%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menuRight {
+    position: absolute;
+    top: 46.6vh;
+    right: 2%;
+    width: 0.9%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menul {
+    left: 8%;
+  }
+}
+
+.logo {
+  font-size: 1.1em;
+  letter-spacing: 1.2em;
+}
