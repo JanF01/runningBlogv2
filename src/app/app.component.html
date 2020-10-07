@@ -1,21 +1,18 @@
 <header>
   <span class="logo">INTENSE RUNNING</span>
   <ul>
-    <li>
-      Archiwum
-    </li>
-    <li>
-      Strona Główna
-    </li>
-    <li>
-      Kontakt
-    </li>
+    <li>Archiwum</li>
+    <li>Strona Główna</li>
+    <li>Kontakt</li>
   </ul>
-  <div class="menu"><img src="assets/menu.png"></div>
-  <div class="menul"><img src="assets/menul.png"></div>
-  <div class="menuRight"><img src="assets/menu-right.png"></div>
+  <div class="menu"><img src="assets/menu.png" /></div>
+  <div class="menul"><img src="assets/menul.png" /></div>
+
+
+  <div class="menuRight" [ngClass]="{ openedMenuRight: menuOpen }" cdkDragLockAxis="x" cdkDrag
+    (cdkDragStarted)="openSideMenu()">
+    <img src="assets/menu-right.png" draggable="false" />
+  </div>
 </header>
 
-<app-article>
-
-</app-article>
+<app-article> </app-article>

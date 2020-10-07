@@ -48,16 +48,39 @@ header {
     }
   }
 
+
+
+
   .menuRight {
-    position: absolute;
-    top: 46.6vh;
-    right: 2%;
-    width: 0.9%;
+    background: linear-gradient(to bottom, #151517, #262631);
+    height: 100vh;
+    position: fixed;
+    right: 0%;
+    top: 0;
+    width: 2%;
+    z-index: 10;
+    transition: all 0.1s;
+    cursor: grab;
+    @include flex();
 
     img {
-      width: 100%;
+      width: 50%;
+      user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
     }
+
+    &.openedMenuRight {
+      width: 350px;
+      right: calc(2% - 350px);
+
+      img {
+        display: none;
+      }
+    }
+
   }
+
 
   .menul {
     left: 8%;

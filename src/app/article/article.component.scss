@@ -4,6 +4,13 @@
   justify-content: center;
 }
 
+@mixin radius($x) {
+  border-radius: $x;
+  -ms-border-radius: $x;
+  -webkit-border-radius: $x;
+  -moz-border-radius: $x;
+}
+
 
 section {
   width: 85%;
@@ -11,13 +18,16 @@ section {
   height: 75vh;
   margin-top: 7vh;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0em 0.8em 1.1em -0.9em rgb(1, 7, 6);
   @include flex();
 }
 
 .content {
   flex: 1;
   height: 99.6%;
-  background: rgb(17, 17, 24);
+  background: linear-gradient(to top left, rgb(17, 23, 24), #041d18);
+  box-shadow: 0em 0.5em 1em -0.1em rgb(1, 7, 6);
   @include flex();
   flex-direction: column;
   color: white;
@@ -32,22 +42,23 @@ section {
   .description {
     font-size: 0.88em;
     width: 300px;
-    text-align: center;
+    text-align: justify;
   }
 
   button {
     margin-top: 2.3em;
-    padding: 0.7em 0.9em 0.7em 0.9em;
-    border-radius: 2em;
-    border: white solid 0.2em;
+    padding: 0.75em 1em 0.75em 1em;
+    @include radius(1em);
+    border: none;
     outline: none;
     color: white;
-    background: #0f215a;
+    background: #1d5e50;
     letter-spacing: 0.03em;
+    transition: all 0.2s;
 
     &:hover {
       cursor: pointer;
-      background: #14286d;
+      background: #257564;
     }
   }
 
